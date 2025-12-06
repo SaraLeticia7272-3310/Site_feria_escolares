@@ -23,7 +23,7 @@ header {
     right: 0;
     display: flex;
     align-items: center;
-    gap: 100px;
+    gap: 10%;
     background-color: #272343;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
     padding: 10px;
@@ -34,7 +34,7 @@ header {
     height: 70px;
     width: 70px;
     background-color: #781d1d;
-    margin-left: 150px;
+    margin-left: 10%;
 }
 
 nav {
@@ -85,15 +85,16 @@ footer {
 ============================================================ */
 
 #index #main {
-    display: block;
-    padding: 20px;
-    margin: 10px;
-    align-items: start;
+    background-color: #fbf4ca;
 }
 
 #index h1 {
+    font-family: "Modak", system-ui;
+    font-weight: 400;
+    font-style: normal;
     margin: 5%;
     text-align: center;
+    transform: translateY(40px);
 }
 
 #index #bloco {
@@ -130,9 +131,6 @@ footer {
 #index .card .img {
     width: 100%;
     height: 100%;
-    background-image: url("sua-imagem.jpg");
-    background-size: cover;
-    background-position: center;
     filter: grayscale(1);
     transition: filter 0.2s ease-in-out, scale 0.2s ease-in-out;
 }
@@ -196,18 +194,21 @@ footer {
 
 /*aside*/
 #index aside {
+    gap: 50%;
     padding: 20px;
     width: 400px;
     border-radius: 15px;
-    box-shadow:
-        inset 10px 10px 50px #ffd9033b,
-        10px 10px 8px #8471033c;
+    box-shadow: 10px 10px 8px #0465653e;
     margin-bottom: 10%;
+    background-color: #e7ffffbb;
 }
 
-#index aside h3,
-#index aside ul {
+#index ul {
     margin-left: 20px;
+}
+
+#index aside li {
+    margin: 5% 1%;
 }
 
 /* ============================================================
@@ -216,7 +217,9 @@ footer {
 
 #destinos #main {
     display: grid;
+    height: 100vh;
     grid-template-columns: repeat(2, 1fr);
+    background-color: #fbf4ca;
 }
 
 #destinos #bloco {
@@ -354,9 +357,13 @@ footer {
 ============================================================ */
 
 #personalidades #main {
+    height: 100vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
+    background-color: #fbf4ca;
+
+
 }
 
 #personalidades h1 {
@@ -371,15 +378,15 @@ footer {
 }
 
 #personalidades .card {
-    height: 80%;
-    width: 70%;
+    height: 90%;
+    width: 60%;
     display: flex;
     background-color: #e9fbfbc4;
     place-items: center;
     place-content: center;
     border-radius: 15px;
     box-shadow: 6px 8px 5px rgba(163, 208, 208, 0.5);
-    margin-bottom: 20px;
+
 }
 
 #personalidades #bloco1 {
@@ -424,7 +431,7 @@ footer {
     place-content: center;
 }
 
-.personagem {
+#personalidades .personagem {
     width: 26%;
     height: 70%;
     margin: 20px;
@@ -432,18 +439,19 @@ footer {
     background: black;
 }
 
-.personagem:hover {
+#personalidades .personagem:hover {
     transform: scale(1.5);
     transition: transform 0.3s ease;
     cursor: pointer;
     margin-right: 10%;
 }
 
-#espaco {
+#personalidades #espaco {
     height: 50px;
+    background-color: #fbf4ca;
 }
 
-#slide {
+#personalidades #slide {
     position: fixed;
     top: 0;
     left: 0;
@@ -456,7 +464,7 @@ footer {
     z-index: 999;
 }
 
-#conteudo {
+#personalidades #conteudo {
     position: relative;
     width: 70%;
     height: 70%;
@@ -466,7 +474,7 @@ footer {
     padding: 20px;
 }
 
-#fechar {
+#personalidades #fechar {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -483,6 +491,7 @@ footer {
 #organizacao #main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    background-color: #fbf4ca;
 }
 
 #organizacao #bloco {
@@ -511,6 +520,10 @@ footer {
     padding: 5%;
 }
 
+#organizacao .categoria:hover {
+    cursor: pointer;
+}
+
 #organizacao .btn-one {
     font-weight: bold;
     text-transform: uppercase;
@@ -526,7 +539,6 @@ footer {
     transform: translateY(-10px);
 }
 
-
 #organizacao .btn-one::before {
     content: '';
     position: absolute;
@@ -537,8 +549,8 @@ footer {
     z-index: 1;
     opacity: 0;
     transition: all 0.3s;
-    border-top: 1px solid rgba(39, 35, 67, 0.5);
-    border-bottom: 1px solid rgba(39, 35, 67, 0.5);
+    border-top: 1px solid rgba(31, 20, 99, 0.5);
+    border-bottom: 1px solid rgba(31, 20, 99, 0.5);
     transform: scale(0.1, 1);
     padding: 10px;
 }
@@ -550,6 +562,7 @@ footer {
 #organizacao .btn-one:hover::before {
     opacity: 1;
     transform: scale(1, 1);
+
 }
 
 #organizacao .btn-one::after {
@@ -562,7 +575,7 @@ footer {
     z-index: 1;
     transition: all 0.3s;
     padding: 10px;
-    background-color: rgba(39, 35, 67, 0.1);
+    background-color: rgba(34, 0, 255, 0.1);
 }
 
 #organizacao .btn-one:hover::after {
@@ -570,19 +583,331 @@ footer {
     transform: scale(0.1, 1);
 }
 
+/* Fundo escurecido */
+#carrosselOrg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Card branco */
+#organizacao #carrosselOrg-conteudo {
+    position: relative;
+    background: white;
+    width: 80%;
+    height: 80%;
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Botão X */
+#organizacao #fecharCarrosselOrg {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Setas */
+#organizacao .setaOrg {
+    background: none;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+    padding: 20px;
+}
+
+#organizacao #prevOrg {
+    position: absolute;
+    left: 40px;
+}
+
+#organizacao #nextOrg {
+    position: absolute;
+    right: 40px;
+}
+
+#organizacao .slidesOrg {
+    font-size: 28px;
+    font-family: "Edu TAS Beginner", cursive;
+}
+
+#organizacao .hidden {
+    display: none;
+}
+
 /* ============================================================
    VÍDEOS
 ============================================================ */
 
-section {
+#videos section {
     width: 100%;
-    height: 100vh;
-    max-width: 1200px;
+    height: 100%;
     margin: 0 auto;
     padding: 80px 20px;
+    text-align: center;
+    background-color: #dbf8f87c;
 }
 
-.sec1 {
+#videos h1,
+#videos h2 {
+    font-family: "Modak", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
     margin-top: 5%;
-    background-color: #781d1d;
+}
+
+#videos section>p {
+    margin: 10px auto;
+    max-width: 800px;
+    align-items: center;
+    text-align: justify;
+}
+
+#videos h2 {
+    margin-top: 3%;
+    text-align: start;
+}
+
+#videos .texto>p {
+    font-weight: 700;
+    margin: 5px auto;
+    max-width: 600px;
+    align-items: center;
+    text-align: justify;
+    font-size: x-large;
+}
+
+.impar {
+
+    justify-content: center;
+    display: flex;
+    padding: 8%;
+    gap: 4%;
+    animation: aparecer-impar ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 0 cover 30%;
+}
+
+.par {
+    background-color: #dbf8f87c;
+    justify-content: center;
+    display: flex;
+    padding: 5%;
+    gap: 2%;
+    color: #fbe567;
+    -webkit-text-stroke: 0.5px #272343;
+    animation: aparecer-par ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 0 cover 30%;
+}
+
+.texto>a {
+    -webkit-text-stroke: 0;
+    color: #3e27d1;
+}
+
+@keyframes aparecer-impar {
+    from {
+        opacity: 0;
+        transform: translateX(500px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes aparecer-par {
+    from {
+        opacity: 0;
+        transform: translateX(-500px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ============================================================
+   CONTATO
+============================================================ */
+
+#contato {
+    font-family: Arial, sans-serif;
+    background: url(../assets/img/praia.jpg) no-repeat center center/cover;
+    padding: 20px;
+    margin-top: 8%;
+
+}
+
+form {
+    backdrop-filter: blur(10px);
+    max-width: 500px;
+    background: transparent;
+    padding: 20px;
+    border-radius: 12px;
+    margin: auto;
+    box-shadow: 0 9px 8px rgba(0, 0, 0, 0.4);
+}
+
+label {
+    color: #272343;
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+}
+
+.botoes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    background: #3e8e41;
+    color: white;
+}
+
+button[type="reset"] {
+    background: #d9534f;
+    color: white;
+}
+
+.form1,
+.form2 {
+    position: relative;
+}
+
+.form1 label {
+    position: absolute;
+    padding: 0% 10px;
+    top: 70%;
+    left: 1em;
+    transform: translateY(-130%) translateX(-12px);
+    color: #272343;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.form2 label {
+    position: absolute;
+    padding: 0% 5px;
+    top: 0%;
+    left: 1em;
+    transform: translateY(-130%) translateX(-12px);
+    color: #272343;
+    pointer-events: none;
+    background: transparent;
+}
+
+.form1 input,
+.form2 textarea {
+    height: 50px;
+    width: 100%;
+    padding: 0.3rem 1rem;
+    outline: none;
+    border: 1px solid #272343;
+    border-radius: 15px;
+    background: transparent;
+    color: #272343;
+}
+
+input:focus~label,
+input:valid~label {
+    top: 0;
+    font-size: 0.7rem;
+    background: transparent;
+}
+
+#contato p {
+    margin-bottom: 10%;
+}
+
+#primeiro {
+    margin-top: 2%;
+}
+
+/*=======================================================================
+        PROCESSA
+=======================================================================*/
+
+#processa {
+    margin: 0;
+    padding: 0;
+    background: #fbf4ca;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+#processa .container {
+    text-align: center;
+}
+
+#processa h2 {
+    font-size: 22px;
+    color: #272343;
+    margin-top: 20px;
+    animation: fadeIn 1s ease forwards;
+}
+
+#processa .loader {
+    width: 55px;
+    height: 55px;
+    border: 6px solid #ddd;
+    border-top-color: #272343;
+    border-radius: 50%;
+    margin-left: 40%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
