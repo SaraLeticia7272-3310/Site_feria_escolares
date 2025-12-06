@@ -84,19 +84,19 @@ footer {
    INDEX
 ============================================================ */
 
-#index main {
+#index #main {
     display: block;
     padding: 20px;
     margin: 10px;
     align-items: start;
 }
 
-h1 {
+#index h1 {
     margin: 5%;
     text-align: center;
 }
 
-#bloco {
+#index #bloco {
     display: flex;
     justify-content: center;
     gap: 10%;
@@ -213,7 +213,8 @@ h1 {
 /* ============================================================
    DESTINOS
 ============================================================ */
-#main {
+
+#destinos #main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
@@ -365,7 +366,7 @@ h1 {
     margin-top: 8%;
 }
 
-.card p {
+#personalidades .card p {
     font-size: larger;
 }
 
@@ -381,42 +382,42 @@ h1 {
     margin-bottom: 20px;
 }
 
-#bloco1 {
+#personalidades #bloco1 {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     place-items: center;
     place-content: center;
 }
 
-#bloco2 {
+#personalidades #bloco2 {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     place-items: center;
     place-content: center;
 }
 
-#bloco3 {
+#personalidades #bloco3 {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
     place-items: center;
     place-content: center;
 }
 
-#bloco4 {
+#personalidades #bloco4 {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
     place-items: center;
     place-content: center;
 }
 
-#bloco5 {
+#personalidades #bloco5 {
     grid-column: 1 / 2;
     grid-row: 4 / 5;
     place-items: center;
     place-content: center;
 }
 
-#bloco6 {
+#personalidades #bloco6 {
     grid-column: 2 / 3;
     grid-row: 4 / 5;
     place-items: center;
@@ -473,4 +474,115 @@ h1 {
     background: transparent;
     font-size: 25px;
     cursor: pointer;
+}
+
+/* ============================================================
+   ORGANIZAÇÃO
+============================================================ */
+
+#organizacao #main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#organizacao #bloco {
+    display: block;
+    margin: 20% 5% 5% 20%;
+    grid-row: 1;
+    grid-column: 1 / 2;
+    text-align: justify;
+}
+
+#organizacao #bloco2 {
+    grid-column: 2 / 3;
+    grid-row: 1;
+    margin: 25% 10% 5% 5%;
+}
+
+#organizacao h1 {
+    font-family: "Modak", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+#organizacao .categoria {
+    padding: 5%;
+}
+
+#organizacao .btn-one {
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#organizacao .btn-one span {
+    transition: all 0.3s;
+    transform: translateY(-10px);
+}
+
+
+#organizacao .btn-one::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border-top: 1px solid rgba(39, 35, 67, 0.5);
+    border-bottom: 1px solid rgba(39, 35, 67, 0.5);
+    transform: scale(0.1, 1);
+    padding: 10px;
+}
+
+#organizacao .btn-one:hover span {
+    letter-spacing: 2px;
+}
+
+#organizacao .btn-one:hover::before {
+    opacity: 1;
+    transform: scale(1, 1);
+}
+
+#organizacao .btn-one::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+    padding: 10px;
+    background-color: rgba(39, 35, 67, 0.1);
+}
+
+#organizacao .btn-one:hover::after {
+    opacity: 0;
+    transform: scale(0.1, 1);
+}
+
+/* ============================================================
+   VÍDEOS
+============================================================ */
+
+section {
+    width: 100%;
+    height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+.sec1 {
+    margin-top: 5%;
+    background-color: #781d1d;
 }

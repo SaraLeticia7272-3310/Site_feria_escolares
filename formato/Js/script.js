@@ -78,7 +78,7 @@ const dados = {
 const cards = document.querySelectorAll(".card");
 const slide = document.getElementById("slide");
 const info = document.getElementById("info");
-const fechar = document.getElementById("fechar");
+const fchar = document.getElementById("fechar");
 
 // Abre o modal ao clicar no card
 cards.forEach(card => {
@@ -93,3 +93,7 @@ cards.forEach(card => {
 fechar.addEventListener("click", () => {
     slide.style.display = "none";
 });
+
+/*========================================================================================
+        ORGANIZAÇÃO
+========================================================================================*/
