@@ -16,6 +16,7 @@ if (location.pathname.endsWith("processa.html")) {
 
     window.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
+            alert("Dados enviados com sucesso!");
             window.location.href = "index.html";
         }, 2000); // 2 segundos para aparecer a animação
     });

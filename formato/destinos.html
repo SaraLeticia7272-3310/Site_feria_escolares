@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" id="destino">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -11,10 +11,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Modak&display=swap" rel="stylesheet">
     <link rel="icon" href="" type="image/x-icon">
     <link rel="stylesheet" href="CSS/estilo.css">
-    <title>Férias escolares</title>
+    <title>Férias Escolares – Destinos</title>
 </head>
 
 <body id="destinos">
+
     <header>
         <div id="logo"></div>
         <nav>
@@ -31,11 +32,18 @@
 
         <div id="bloco">
 
-            <h2>Destinos</h2>
+            <h1>Destinos</h1>
             <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, tenetur. Distinctio sit commodi eum at
-                accusamus voluptatibus, labore sint dignissimos nisi corrupti officiis! Unde repellat aperiam dolorem
-                nisi quos temporibus!
+                Escolher um bom destino é uma das partes mais importantes do planejamento das férias, pois influencia
+                diretamente na experiência, no conforto e no aproveitamento de cada momento. Um destino bem escolhido
+                pode trazer novas vivências, estimular o contato com a natureza, fortalecer vínculos familiares e
+                permitir que crianças e jovens descubram atividades diferentes do dia a dia. Cada lugar oferece
+                oportunidades únicas: praias para quem busca descanso e diversão; campo para quem deseja tranquilidade e
+                contato natural; parques e atrações gratuitas para quem quer economia; e atividades em casa para dias
+                mais simples, porém cheios de criatividade. Ao explorar novos destinos, ampliamos nossa visão de mundo,
+                aprendemos sobre culturas, nos desconectamos da rotina e criamos memórias que ficam para sempre. Por
+                isso, planejar para onde ir é tão importante quanto decidir o que fazer — é o primeiro passo para viver
+                férias realmente inesquecíveis.
             </p>
 
         </div>
@@ -44,14 +52,21 @@
 
             <h2>Categorias</h2>
             <div id="itens">
+
                 <div class="sombra">
-                    <div class="item">sjbfjkadbfjkda</div>
+                    <div class="item">Destinos de Praia</div>
                 </div>
+
                 <div class="sombra">
-                    <div class="item">sjbfjkadbfjkda</div>
+                    <div class="item">Destinos de Campo</div>
                 </div>
+
                 <div class="sombra">
-                    <div class="item">sjbfjkadbfjkda</div>
+                    <div class="item">Atividades em Casa</div>
+                </div>
+
+                <div class="sombra">
+                    <div class="item">Parques e Passeios Gratuitos</div>
                 </div>
 
             </div>
@@ -60,16 +75,184 @@
 
     </main>
 
-    <!-- CARROSSEL / MODAL -->
     <div id="carrossel" class="hidden">
         <div class="carrossel-content">
 
-            <button id="fecharCarrossel">✕</button>
+            <div id="slides">
+
+                <!-- Cards da praia -->
+                <div class="slide" data-cat="0">
+                    <div class="vidro">
+                        <p>
+                            Destinos perfeitos para quem gosta de sol e mar, com atividades como natação, snorkeling,
+                            passeios de barco e muito lazer ao ar livre.
+                        </p>
+                    </div>
+                    <img src="assets/img/praia2.jpg" alt="imagem de uma praia">
+                </div>
+
+                <div class="slide" data-cat="0">
+                    <div class="vidro">
+                        <p>
+                            Dicas essenciais para aproveitar o litoral com tranquilidade: use protetor solar,
+                            mantenha-se hidratado, evite mar agitado e respeite sinalizações.
+                        </p>
+                    </div>
+                    <img src="assets/img/praia3.jpg" alt="protetor solar">
+                </div>
+
+                <div class="slide" data-cat="0">
+                    <div class="vidro">
+                        <p>
+                            Futebol, vôlei, frescobol e diversas atividades esportivas perfeitas para se divertir com
+                            amigos e aproveitar a praia de forma ativa.
+                        </p>
+                    </div>
+                    <img src="assets/img/praia4.jpg" alt="protetor solar">
+                </div>
+
+                <div class="slide" data-cat="0">
+                    <div class="vidro">
+                        <p>
+                            Passeios de observação, mergulho leve e visitas guiadas que permitem conhecer animais e
+                            plantas típicos do litoral.
+                        </p>
+                    </div>
+                    <img src="assets/img/praia5.jpg" alt="protetor solar">
+                </div>
+                <!-- Fim dos cards da praia -->
+
+                <!-- Cards do campo -->
+                <div class="slide" data-cat="1">
+                    <div class="vidro">
+                        <p>
+                            Ideal para quem ama natureza. Trilha leve, mirantes, cachoeiras e lugares perfeitos para
+                            relaxar e respirar ar puro.
+                        </p>
+                    </div>
+                    <img src="assets/img/campo2.jpg" alt="protetor solar">
+                </div>
+
+                <div class="slide" data-cat="1">
+                    <div class="vidro">
+                        <p>
+                            Espaços verdes que permitem observar pássaros, flores e animais, além de aproveitar um dia
+                            tranquilo longe da cidade.
+                        </p>
+                    </div>
+                    <img src="assets/img/campo3.jpg" alt="protetor solar">
+                </div>
+
+                <div class="slide" data-cat="1">
+                    <div class="vidro">
+                        <p>
+                            Noites em barracas, fogueiras, observação de estrelas e atividades ao ar livre que deixam as
+                            férias ainda mais especiais.
+                        </p>
+                    </div>
+                    <img src="assets/img/campo4.jpg" alt="protetor solar">
+                </div>
+
+                <div class="slide" data-cat="1">
+                    <div class="vidro">
+                        <p>
+                            Lugares com contato com animais, plantio, caminhadas e experiências que aproximam os
+                            visitantes da vida rural.
+                        </p>
+                    </div>
+                    <img src="assets/img/campo5.jpg" alt="protetor solar">
+                </div>
+                <!-- Fim dos cards do campo -->
+
+                <!-- Cards de casa -->
+                <div class="slide" data-cat="2">
+                    <div class="vidro">
+                        <p>
+                            Dicas de filmes temáticos, oficinas de desenho, culinária, artesanato e outras atividades
+                            que não precisam sair de casa.
+                        </p>
+                    </div>
+                    <img src="assets/img/casa1.jpg" alt="protetor solar">
+                </div>
+
+                <div class="slide" data-cat="2">
+                    <div class="vidro">
+                        <p>
+                            Jogos de tabuleiro, desafios lógicos e competições simples que unem a família e tornam o dia
+                            mais divertido.
+                        </p>
+                    </div>
+                    <img src="assets/img/casa2.jpg" alt="protetor solar">
+                </div>
+
+                <div class="slide" data-cat="2">
+                    <div class="vidro">
+                        <p>
+                            Receitas rápidas, doces simples, mini oficinas culinárias e pratos divertidos para preparar
+                            junto com a família.
+                        </p>
+                    </div>
+                    <img src="assets/img/casa3.jpg" alt="protetor solar">
+                </div>
+
+                <div class="slide" data-cat="2">
+                    <div class="vidro">
+                        <p>
+                            Pintura, origami, reciclagem artística e projetos simples que estimulam imaginação e
+                            habilidades manuais.
+                        </p>
+                    </div>
+                    <img src="assets/img/casa4.jpg" alt="protetor solar">
+                </div>
+                <!-- Fim dos cards de casa -->
+
+                <!-- Cards de parques -->
+                <div class="slide" data-cat="3">
+                    <div class="vidro">
+                        <p>
+                            Locais acessíveis com playgrounds, trilhas, áreas verdes e espaços para piqueniques,
+                            perfeitos para um dia econômico e divertido.
+                        </p>
+                    </div>
+                    <img src="assets/img/parque1.jpg" alt="protetor solar">
+                </div>
+
+                <div class="slide" data-cat="3">
+                    <div class="vidro">
+                        <p>
+                            Sugestões de museus gratuitos, mirantes naturais, feiras culturais e pontos turísticos que
+                            não precisam de ingresso.
+                        </p>
+                    </div>
+                    <img src="assets/img/parque2.jpg" alt="protetor solar">
+                </div>
+
+                <div class="slide" data-cat="3">
+                    <div class="vidro">
+                        <p>
+                            Mirantes, praças temáticas e lugares perfeitos para registrar momentos das férias sem gastar
+                            nada.
+                        </p>
+                    </div>
+                    <img src="assets/img/parque3.jpg" alt="protetor solar">
+                </div>
+
+                <div class="slide" data-cat="3">
+                    <div class="vidro">
+                        <p>
+                            Feiras culturais, festivais ao ar livre, apresentações gratuitas e outras atividades abertas
+                            ao público.
+                        </p>
+                    </div>
+                    <img src="assets/img/parque4.jpg" alt="protetor solar">
+                </div>
+                <!-- Fim dos cards de parques -->
+
+            </div>
+
+            <button id="fecharCarrossel">❌</button>
 
             <button id="prevSlide" class="nav-btn">❮</button>
-
-            <div id="slides"></div>
-
             <button id="nextSlide" class="nav-btn">❯</button>
         </div>
     </div>
@@ -79,7 +262,7 @@
         <p>© 2024 - Projeto Férias</p>
     </footer>
 
-    <script src="Js/script.js"></script>
+    <script src="Js/escript.js"></script>
 </body>
 
 </html>

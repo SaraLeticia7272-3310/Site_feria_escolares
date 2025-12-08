@@ -1,38 +1,33 @@
 /* =====================================================================================
      DESTINOS
 ========================================================================================*/
-
-// Só roda se existir o carrossel
+//roda se for um carrossel
 if (document.getElementById("carrossel")) {
 
-    const conteudoCategorias = [
-        ["Slide 1 - Categoria 1", "Slide 2 - Categoria 1", "Slide 3 - Categoria 1"],
-        ["Slide 1 - Categoria 2", "Slide 2 - Categoria 2"],
-        ["Slide 1 - Categoria 3", "Slide 2 - Categoria 3", "Slide 3 - Categoria 3"],
-    ];
-
-    let categoriaAtual = 0;
-    let slideAtual = 0;
-
     const carrossel = document.getElementById("carrossel");
-    const slidesArea = document.getElementById("slides");
+    const slides = document.querySelectorAll(".slide");
+
     const prevBtn = document.getElementById("prevSlide");
     const nextBtn = document.getElementById("nextSlide");
     const fechar = document.getElementById("fecharCarrossel");
 
     const botoes = document.querySelectorAll(".item");
 
+    let categoriaAtual = 0;
+    let slideAtual = 0;
+
     botoes.forEach((btn, index) => {
         btn.addEventListener("click", () => {
             categoriaAtual = index;
             slideAtual = 0;
+
             abrirCarrossel();
+            mostrarSlide();
         });
     });
 
     function abrirCarrossel() {
         carrossel.classList.remove("hidden");
-        mostrarSlide();
     }
 
     fechar.addEventListener("click", () => {
@@ -40,22 +35,34 @@ if (document.getElementById("carrossel")) {
     });
 
     function mostrarSlide() {
-        slidesArea.innerHTML = conteudoCategorias[categoriaAtual][slideAtual];
+        slides.forEach(s => s.style.display = "none");
+
+        const slidesDaCategoria = [...slides].filter(
+            s => s.dataset.cat == categoriaAtual
+        );
+
+        slidesDaCategoria[slideAtual].style.display = "block";
     }
 
     nextBtn.addEventListener("click", () => {
+        const lista = [...slides].filter(s => s.dataset.cat == categoriaAtual);
+
         slideAtual++;
-        if (slideAtual >= conteudoCategorias[categoriaAtual].length) slideAtual = 0;
+        if (slideAtual >= lista.length) slideAtual = 0;
+
         mostrarSlide();
     });
 
     prevBtn.addEventListener("click", () => {
+        const lista = [...slides].filter(s => s.dataset.cat == categoriaAtual);
+
         slideAtual--;
-        if (slideAtual < 0) slideAtual = conteudoCategorias[categoriaAtual].length - 1;
+        if (slideAtual < 0) slideAtual = lista.length - 1;
+
         mostrarSlide();
     });
-
 }
+
 
 /*========================================================================================
         PERSONALIDADES
@@ -65,17 +72,31 @@ if (document.getElementById("carrossel")) {
 if (document.getElementById("slide")) {
 
     const dados = {
-        guerreiro: `
-            <h2>Guerreiro</h2>
-            <p>Força elevada, defesa alta, especialista em combate corpo a corpo.</p>
+        perfil1: `
+            <p>Gosta de explorar trilhas, cachoeiras, esportes radicais e tudo que envolva adrenalina. 
+            Prefere destinos naturais, montanhas e atividades ao ar livre que desafiem seus limites.</p>
         `,
-        mago: `
-            <h2>Mago</h2>
-            <p>Alta inteligência, usa magias poderosas e controle elemental.</p>
+        perfil2: `
+            <p>Busca descanso, sombra e água fresca. Prefere praias tranquilas, redes, leitura, passeios leves e lugares 
+            silenciosos para descansar a mente durante as férias.</p>
         `,
-        arqueiro: `
-            <h2>Arqueiro</h2>
-            <p>Alta precisão, ataques à distância e grande agilidade.</p>
+        perfil3: `
+            <p>Adora museus, centros históricos, monumentos e lugares cheios de história. 
+            Aproveita as férias para conhecer tradições, artes, culinárias regionais e aprender algo novo.</p>
+        `,
+        perfil4: `
+            <p>Gosta de cidades movimentadas, shoppings, cinemas, cafés e parques urbanos. 
+            Prefere destino com muita estrutura e várias opções de lazer no mesmo lugar.</p>
+        `,
+        perfil5: `
+            <p>Procura atividades que agradem todas as idades. Prefere parques, 
+            zoológicos, praias tranquilas, museus interativos e passeios seguros para 
+            aproveitar com crianças e adultos.</p>
+        `,
+        perfil6: `
+            <p>Adora artes, fotografia, música e projetos manuais. 
+            Prefere destinos tranquilos onde pode se inspirar, fazer oficinas, produzir 
+            arte ou participar de atividades culturais.</p>
         `
     };
 

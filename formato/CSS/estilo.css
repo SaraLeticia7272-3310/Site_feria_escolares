@@ -92,26 +92,27 @@ footer {
     font-family: "Modak", system-ui;
     font-weight: 400;
     font-style: normal;
+    font-size: 195%;
     margin: 5%;
-    text-align: center;
+    text-align: justify;
     transform: translateY(40px);
 }
 
 #index #bloco {
     display: flex;
     justify-content: center;
-    gap: 10%;
+    gap: 20%;
 }
 
 /*cards*/
 #card1 {
-    background: url(../assets/img/campo.jpg) no-repeat center center/cover;
+    background: url(../assets/img/praia.jpg) no-repeat center center/cover;
     padding: 20px;
     margin-bottom: 20%;
 }
 
 #card2 {
-    background: url(../assets/img/praia.jpg) no-repeat center center/cover;
+    background: url(../assets/img/campo.jpg) no-repeat center center/cover;
     padding: 20px;
     margin: 20% 0 10% 0;
 }
@@ -167,7 +168,7 @@ footer {
 }
 
 #index .card:hover .titulo {
-    bottom: 60px;
+    bottom: 120px;
 }
 
 #index .card .descricao {
@@ -196,7 +197,7 @@ footer {
 #index aside {
     gap: 50%;
     padding: 20px;
-    width: 400px;
+    width: 35%;
     border-radius: 15px;
     box-shadow: 10px 10px 8px #0465653e;
     margin-bottom: 10%;
@@ -204,11 +205,8 @@ footer {
 }
 
 #index ul {
-    margin-left: 20px;
-}
-
-#index aside li {
-    margin: 5% 1%;
+    margin-top: 10%;
+    margin-left: 30px;
 }
 
 /* ============================================================
@@ -225,17 +223,24 @@ footer {
 #destinos #bloco {
     display: block;
     grid-column: 1 / 2;
-    margin: 20%;
+    margin: 20% 10%;
+}
+
+#destinos h1,
+#destinos h2 {
+    font-family: "Modak", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
 }
 
 #destinos h2 {
-    text-align: center;
-    margin-bottom: 5%;
+    margin-bottom: 4%;
 }
 
 #categoria {
     grid-column: 2 / 3;
-    margin: 20%;
+    margin: 20% 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -248,6 +253,7 @@ footer {
     align-items: center;
     justify-content: center;
     gap: 20px;
+    font-size: larger;
 }
 
 .sombra {
@@ -273,6 +279,7 @@ footer {
     justify-content: center;
     align-items: center;
     transform: translateY(-8px) translateX(-4px);
+
 }
 
 .item:hover {
@@ -316,10 +323,12 @@ footer {
     position: absolute;
     top: 10px;
     right: 10px;
-    border: none;
-    background: transparent;
     font-size: 25px;
     cursor: pointer;
+    z-index: 1;
+    background: transparent;
+    border: none;
+    filter: brightness(0) invert(1);
 }
 
 .nav-btn {
@@ -328,28 +337,63 @@ footer {
     font-size: 50px;
     cursor: pointer;
     padding: 10px;
-    color: #333;
+    color: #ffffff;
 }
 
 #prevSlide {
     position: absolute;
     left: 20px;
+    z-index: 1;
 }
 
 #nextSlide {
     position: absolute;
     right: 20px;
+    z-index: 1;
 }
 
 /* Área do slide */
 #slides {
-    width: 80%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 22px;
-    text-align: center;
+}
+
+#destinos .slide {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#destinos .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 0;
+    transform: translateY(-77.5px);
+}
+
+
+#destinos .slide p {
+    font-size: 20px;
+    width: 80%;
+    transform: translateX(80px);
+    color: white;
+    text-shadow: 0 0 5px black;
+}
+
+.vidro {
+    position: relative;
+    width: 80%;
+    padding: 1%;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    transform: translateX(110px) translateY(400px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
 /* ============================================================
@@ -396,11 +440,19 @@ footer {
     place-content: center;
 }
 
+#personalidades #bloco1 .personagem {
+    background: url(../assets/img/aventureiro.png) no-repeat center/cover;
+}
+
 #personalidades #bloco2 {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     place-items: center;
     place-content: center;
+}
+
+#personalidades #bloco2 .personagem {
+    background: url(../assets/img/relaxado.png) no-repeat center/cover;
 }
 
 #personalidades #bloco3 {
@@ -410,11 +462,19 @@ footer {
     place-content: center;
 }
 
+#personalidades #bloco3 .personagem {
+    background: url(../assets/img/cultural.png) no-repeat center/cover;
+}
+
 #personalidades #bloco4 {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
     place-items: center;
     place-content: center;
+}
+
+#personalidades #bloco4 .personagem {
+    background: url(../assets/img/.png) no-repeat center/cover black;
 }
 
 #personalidades #bloco5 {
@@ -424,6 +484,10 @@ footer {
     place-content: center;
 }
 
+#personalidades #bloco5 .personagem {
+    background: url(../assets/img/avntureiro.png) no-repeat center/cover black;
+}
+
 #personalidades #bloco6 {
     grid-column: 2 / 3;
     grid-row: 4 / 5;
@@ -431,12 +495,15 @@ footer {
     place-content: center;
 }
 
+#personalidades #bloco6 .personagem {
+    background: url(../assets/img/criativo.png) no-repeat center/cover;
+}
+
 #personalidades .personagem {
     width: 26%;
     height: 70%;
     margin: 20px;
     border-radius: 100px;
-    background: black;
 }
 
 #personalidades .personagem:hover {
@@ -468,7 +535,7 @@ footer {
     position: relative;
     width: 70%;
     height: 70%;
-    background: white;
+    background: #e4fafa;
     border-radius: 15px;
     overflow: hidden;
     padding: 20px;
@@ -482,6 +549,7 @@ footer {
     background: transparent;
     font-size: 25px;
     cursor: pointer;
+    filter: brightness(0) invert(0);
 }
 
 /* ============================================================
@@ -892,7 +960,7 @@ input:valid~label {
     border: 6px solid #ddd;
     border-top-color: #272343;
     border-radius: 50%;
-    margin-left: 40%;
+    margin-left: 30%;
     animation: spin 1s linear infinite;
 }
 
