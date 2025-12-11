@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /*deixa o tamanho dos elementos muito mais fácil de controlar*/
 }
 
 body {
@@ -94,12 +95,12 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    grid-column: 1 / 5;
     background-color: #272343;
     color: white;
     text-align: center;
     padding: 10px 0;
     height: 40px;
+    z-index: 100;
 }
 
 /* ============================================================
@@ -161,12 +162,14 @@ footer {
     width: 100%;
     height: 100%;
     filter: grayscale(1);
+    /*controla o quanto a imagem fica preto e branco.*/
     transition: filter 0.2s ease-in-out, scale 0.2s ease-in-out;
 }
 
 #index .card:hover .img {
     filter: grayscale(0);
     scale: 1.03;
+    /*aumenta ou diminui suavemente o elemento*/
 }
 
 #index .card .overlay {
@@ -318,7 +321,7 @@ footer {
     transform: translateY(0) translateX(0);
 }
 
-/* ----- MODAL DO CARROSSEL ----- */
+/*carrossel*/
 #carrossel {
     position: fixed;
     top: 0;
@@ -381,13 +384,11 @@ footer {
     z-index: 1;
 }
 
-/* Área do slide */
 #slides {
     width: 100%;
     height: 100%;
     display: flex;
     font-size: 22px;
-
 }
 
 #destinos .slide {
@@ -718,7 +719,6 @@ footer {
     transform: scale(0.1, 1);
 }
 
-/* Fundo escurecido */
 #carrosselOrg {
     position: fixed;
     top: 0;
@@ -745,7 +745,7 @@ footer {
     z-index: 0;
 }
 
-/* Botão X */
+/*botões*/
 #organizacao #fecharCarrosselOrg {
     position: absolute;
     top: 20px;
@@ -823,12 +823,11 @@ footer {
     margin: 5px auto;
     max-width: 600px;
     align-items: center;
-    text-align: justify;
+    text-align: left;
     font-size: x-large;
 }
 
 .impar {
-
     justify-content: center;
     display: flex;
     padding: 8%;
@@ -1186,12 +1185,6 @@ input:valid~label {
         transform: translateY(20px);
     }
 
-    #slides {
-        width: 100%;
-        height: 100%;
-        font-size: 22px;
-    }
-
     #destinos .slide img {
         transform: translateY(-130px);
     }
@@ -1332,5 +1325,164 @@ input:valid~label {
 
     form {
         transform: translateY(110px);
+    }
+}
+
+@media (max-width: 480px) {
+
+    footer {
+        height: 55px;
+        font-size: smaller;
+    }
+
+    /*============= INDEX =============*/
+
+    #index h1 {
+        font-size: 110%;
+    }
+
+    #index .card {
+        width: 90%;
+    }
+
+    #index aside {
+        width: 90%;
+        margin: 5%;
+    }
+
+    /*============= DESTINO =============*/
+
+    #categoria {
+        transform: translateY(60px)
+    }
+
+    #destinos #main {
+        transform: translateY(70px);
+    }
+
+    #itens {
+        font-size: large;
+    }
+
+    #destinos .slide img {
+        height: 110%;
+        transform: translateY(-230px);
+    }
+
+    .carrossel-content {
+        height: 75%;
+    }
+
+    .vidro {
+        transform: translateX(60px) translateY(450px);
+    }
+
+    /*============= PERSONALIDADES =============*/
+
+    #personalidades #main {
+        height: 180vh;
+    }
+
+    #personalidades h1 {
+        transform: translateY(80px);
+    }
+
+    #personalidades .card {
+        height: 20vh;
+        width: 90%;
+    }
+
+    #personalidades .card p {
+        font-size: x-large;
+    }
+
+    #personalidades #bloco1>div {
+        margin-top: 25%;
+    }
+
+    #personalidades #conteudo {
+        width: 90%;
+        height: 70%;
+    }
+
+    #personalidades .cardPerfil {
+        display: block;
+    }
+
+    #personalidades .cardPerfil .fotoPersonagem {
+        width: 80%;
+    }
+
+    /*============= ORGANIZAÇÃO =============*/
+
+    #organizacao #main {
+        transform: translateY(70px);
+    }
+
+    #organizacao h1 {
+        margin-bottom: 1%;
+    }
+
+    #organizacao .categoria span {
+        font-size: medium;
+    }
+
+    #organizacao #carrosselOrg-conteudo {
+        width: 90%;
+        height: 80%;
+    }
+
+    #organizacao .textoCard {
+        width: 100%;
+    }
+
+    #organizacao .cards {
+        display: block;
+    }
+
+    #organizacao .cards>img {
+        width: 100%;
+        margin-top: 10%;
+    }
+
+    /*============= VÍDEOS =============*/
+
+    #videos .textoPrincipal {
+        margin: 65% 10% 10% 10%;
+    }
+
+    .impar {
+        all: unset;
+        display: none;
+        justify-content: center;
+        display: block;
+        padding: 8%;
+        gap: 4%;
+    }
+
+    .par {
+        all: unset;
+        display: none;
+        background-color: #dbf8f87c;
+        justify-content: center;
+        display: block;
+        padding: 5%;
+        gap: 2%;
+        color: #fbe567;
+    }
+
+    iframe {
+        width: 100%;
+    }
+
+    /*============= CONTATO =============*/
+
+    #contato {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    form {
+        transform: translateY(50%);
     }
 }

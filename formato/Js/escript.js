@@ -4,8 +4,8 @@
 //roda se for um carrossel
 if (document.getElementById("carrossel")) {
 
-    const carrossel = document.getElementById("carrossel");
-    const slides = document.querySelectorAll(".slide");
+    const carrossel = document.getElementById("carrossel"); /*procura um elemento pelo ID*/
+    const slides = document.querySelectorAll(".slide"); /*pega todos os elementos com esse seletor */
 
     const prevBtn = document.getElementById("prevSlide");
     const nextBtn = document.getElementById("nextSlide");
@@ -15,6 +15,11 @@ if (document.getElementById("carrossel")) {
 
     let categoriaAtual = 0;
     let slideAtual = 0;
+    /*addEventListener é usado para "ouvir" ações do usuário.
+        click → quando clica
+        mouseover → quando passa o mouse
+        input → quando digita
+        scroll → quando rola*/
 
     botoes.forEach((btn, index) => {
         btn.addEventListener("click", () => {
